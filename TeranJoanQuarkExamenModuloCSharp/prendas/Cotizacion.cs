@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TeranJoanQuarkExamenModuloCSharp.prendas
 {
@@ -19,5 +17,5 @@ namespace TeranJoanQuarkExamenModuloCSharp.prendas
         }
 
     }
-    
+
 }

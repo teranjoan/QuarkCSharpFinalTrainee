@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using TeranJoanQuarkExamenModuloCSharp.prendas;
 namespace TeranJoanQuarkExamenModuloCSharp
 {
@@ -52,20 +50,20 @@ namespace TeranJoanQuarkExamenModuloCSharp
             tienda = new Tienda("Tienda de ropa Don Filipo", "Avenida El Libertador 1234");
             vendedor = new Vendedor(1, "Mariano", "Gutierrez", tienda);
 
-            tienda.AgregarPrendas(new Camisa(CalidadEnum.Standard, 100, 100, TipoDeCuelloDeCamisaEnum.Mao, TipoDeMangaDeCamisaEnum.Corta));
-            tienda.AgregarPrendas(new Camisa(CalidadEnum.Premium, 100, 100, TipoDeCuelloDeCamisaEnum.Mao, TipoDeMangaDeCamisaEnum.Corta));
-            tienda.AgregarPrendas(new Camisa(CalidadEnum.Standard, 100, 150, TipoDeCuelloDeCamisaEnum.Comun, TipoDeMangaDeCamisaEnum.Corta));
-            tienda.AgregarPrendas(new Camisa(CalidadEnum.Premium, 100, 150, TipoDeCuelloDeCamisaEnum.Comun, TipoDeMangaDeCamisaEnum.Corta));
-            tienda.AgregarPrendas(new Camisa(CalidadEnum.Standard, 100, 75, TipoDeCuelloDeCamisaEnum.Mao, TipoDeMangaDeCamisaEnum.Larga));
-            tienda.AgregarPrendas(new Camisa(CalidadEnum.Premium, 100, 75, TipoDeCuelloDeCamisaEnum.Mao, TipoDeMangaDeCamisaEnum.Larga));
-            tienda.AgregarPrendas(new Camisa(CalidadEnum.Standard, 100, 175, TipoDeCuelloDeCamisaEnum.Comun, TipoDeMangaDeCamisaEnum.Larga));
-            tienda.AgregarPrendas(new Camisa(CalidadEnum.Premium, 100, 175, TipoDeCuelloDeCamisaEnum.Comun, TipoDeMangaDeCamisaEnum.Larga));
+            tienda.AgregarPrendas(new Camisa(CalidadEnum.Standard, 100, TipoDeCuelloDeCamisaEnum.Mao, TipoDeMangaDeCamisaEnum.Corta));
+            tienda.AgregarPrendas(new Camisa(CalidadEnum.Premium, 100, TipoDeCuelloDeCamisaEnum.Mao, TipoDeMangaDeCamisaEnum.Corta));
+            tienda.AgregarPrendas(new Camisa(CalidadEnum.Standard, 150, TipoDeCuelloDeCamisaEnum.Comun, TipoDeMangaDeCamisaEnum.Corta));
+            tienda.AgregarPrendas(new Camisa(CalidadEnum.Premium, 150, TipoDeCuelloDeCamisaEnum.Comun, TipoDeMangaDeCamisaEnum.Corta));
+            tienda.AgregarPrendas(new Camisa(CalidadEnum.Standard, 75, TipoDeCuelloDeCamisaEnum.Mao, TipoDeMangaDeCamisaEnum.Larga));
+            tienda.AgregarPrendas(new Camisa(CalidadEnum.Premium, 75, TipoDeCuelloDeCamisaEnum.Mao, TipoDeMangaDeCamisaEnum.Larga));
+            tienda.AgregarPrendas(new Camisa(CalidadEnum.Standard, 175, TipoDeCuelloDeCamisaEnum.Comun, TipoDeMangaDeCamisaEnum.Larga));
+            tienda.AgregarPrendas(new Camisa(CalidadEnum.Premium, 175, TipoDeCuelloDeCamisaEnum.Comun, TipoDeMangaDeCamisaEnum.Larga));
 
-            tienda.AgregarPrendas(new Pantalon(CalidadEnum.Standard, 100, 750, TipoDePantalonEnum.Chupin));
-            tienda.AgregarPrendas(new Pantalon(CalidadEnum.Premium, 100, 750, TipoDePantalonEnum.Chupin));
-            tienda.AgregarPrendas(new Pantalon(CalidadEnum.Standard, 100, 250, TipoDePantalonEnum.Comun));
-            tienda.AgregarPrendas(new Pantalon(CalidadEnum.Premium, 100, 250, TipoDePantalonEnum.Comun));
+            tienda.AgregarPrendas(new Pantalon(CalidadEnum.Standard, 750, TipoDePantalonEnum.Chupin));
+            tienda.AgregarPrendas(new Pantalon(CalidadEnum.Premium, 750, TipoDePantalonEnum.Chupin));
+            tienda.AgregarPrendas(new Pantalon(CalidadEnum.Standard, 250, TipoDePantalonEnum.Comun));
+            tienda.AgregarPrendas(new Pantalon(CalidadEnum.Premium, 250, TipoDePantalonEnum.Comun));
         }
-        
+
     }
 }

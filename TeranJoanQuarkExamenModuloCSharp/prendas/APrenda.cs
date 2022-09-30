@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace TeranJoanQuarkExamenModuloCSharp.prendas
 {
@@ -10,15 +8,20 @@ namespace TeranJoanQuarkExamenModuloCSharp.prendas
         public float PrecioUnitario { get; set; }
         public int CantidadEnStock { get; set; }
 
-        public APrenda(CalidadEnum Calidad, float PrecioUnitario, int CantidadEnStock)
+        public APrenda(CalidadEnum Calidad, int CantidadEnStock)
         {
             this.Calidad = Calidad;
-            this.PrecioUnitario = PrecioUnitario;
             this.CantidadEnStock = CantidadEnStock;
+            this.PrecioUnitario = 0;
         }
-        public virtual string ToString()
+        public override string ToString()
         {
-            return  String.Format("APrenda:[Calidad:{0},PrecioUnitario:{1},CantidadEnStock:{2}]", Calidad, PrecioUnitario, CantidadEnStock);
+            return String.Format("APrenda:[Calidad:{0},PrecioUnitario:{1},CantidadEnStock:{2}]", Calidad, PrecioUnitario, CantidadEnStock);
+        }
+
+        public virtual bool Equals(APrenda obj)
+        {
+            return (obj).Calidad == Calidad;
         }
     }
 }

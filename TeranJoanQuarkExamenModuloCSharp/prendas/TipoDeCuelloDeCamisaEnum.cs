@@ -1,5 +1,5 @@
 ﻿public enum TipoDeCuelloDeCamisaEnum
 {
-    Mao=0,
-    Comun=1,
+    Mao = 0,
+    Comun = 1,
 }

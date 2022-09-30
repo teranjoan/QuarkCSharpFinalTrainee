@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using TeranJoanQuarkExamenModuloCSharp.prendas;
 
 
@@ -10,7 +8,7 @@ namespace TeranJoanQuarkExamenModuloCSharp
     {
         private string Nombre { get; set; }
         private string Direccion { get; }
-        private List<APrenda> Prendas { get; }
+        public List<APrenda> Prendas { get; }
 
         public Tienda(string Nombre, string Direccion)
         {
