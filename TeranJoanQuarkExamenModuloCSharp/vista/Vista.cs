@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using TeranJoanQuarkExamenModuloCSharp.prendas;
-using TeranJoanQuarkExamenModuloCSharp.utils;
 
 namespace TeranJoanQuarkExamenModuloCSharp.vista
 {
@@ -61,6 +60,7 @@ namespace TeranJoanQuarkExamenModuloCSharp.vista
         }
         public void MensajeDeSalirDelPrograma()
         {
+            Console.Clear();
             Console.WriteLine("=============================================================");
             Console.WriteLine("Saliendo del programa.");
             Console.WriteLine("=============================================================");
@@ -92,23 +92,23 @@ namespace TeranJoanQuarkExamenModuloCSharp.vista
         {
             APrenda prenda;
 
-            int pantalonOCamisa = Utils.UtilSelectOption("Seleccione el tipo de prenda.", new string[] { "Pantalon", "Camisa" });
-            CalidadEnum calidadEnum = (CalidadEnum)Utils.UtilSelectOption("Seleccione el la calidad de tela.", new string[] { "Standard", "Premium" });
+            int pantalonOCamisa = VistaUtils.UtilSelectOption("Seleccione el tipo de prenda.", new string[] { "Pantalon", "Camisa" });
+            CalidadEnum calidadEnum = (CalidadEnum)VistaUtils.UtilSelectOption("Seleccione el la calidad de tela.", new string[] { "Standard", "Premium" });
             if (pantalonOCamisa == 1)
             {
-                TipoDeMangaDeCamisaEnum tipoDeMangaDeCamisaEnum = (TipoDeMangaDeCamisaEnum)Utils.UtilSelectOption("Seleccione el tipo de mangas.", new string[] { "Manga Corta", "Manga Larga" });
-                TipoDeCuelloDeCamisaEnum tipoDeCuelloDeCamisaEnum = (TipoDeCuelloDeCamisaEnum)Utils.UtilSelectOption("Seleccione el tipo de cuello.", new string[] { "Cuello Mao", "Cuello Comun" });
+                TipoDeMangaDeCamisaEnum tipoDeMangaDeCamisaEnum = (TipoDeMangaDeCamisaEnum)VistaUtils.UtilSelectOption("Seleccione el tipo de mangas.", new string[] { "Manga Corta", "Manga Larga" });
+                TipoDeCuelloDeCamisaEnum tipoDeCuelloDeCamisaEnum = (TipoDeCuelloDeCamisaEnum)VistaUtils.UtilSelectOption("Seleccione el tipo de cuello.", new string[] { "Cuello Mao", "Cuello Comun" });
                 prenda = new Camisa(calidadEnum, 0, tipoDeCuelloDeCamisaEnum, tipoDeMangaDeCamisaEnum);
             }
             else
             {
-                TipoDePantalonEnum tipoDePantalonEnum = (TipoDePantalonEnum)Utils.UtilSelectOption("Seleccione el tipo de pantalon.", new string[] { "Comun", "Chupin" });
+                TipoDePantalonEnum tipoDePantalonEnum = (TipoDePantalonEnum)VistaUtils.UtilSelectOption("Seleccione el tipo de pantalon.", new string[] { "Comun", "Chupin" });
                 prenda = new Pantalon(calidadEnum, 0, tipoDePantalonEnum);
             }
 
 
-            prenda.PrecioUnitario = Utils.UtilInputPrice("Ingrese el valor de la prenda.");
-            int cantidadDePrendas = Utils.UtilInputQuantity("Ingrese la cantidad de prendas a cotizar.");
+            prenda.PrecioUnitario = VistaUtils.UtilInputPrice("Ingrese el valor de la prenda.");
+            int cantidadDePrendas = VistaUtils.UtilInputQuantity("Ingrese la cantidad de prendas a cotizar.");
 
             try
             {
