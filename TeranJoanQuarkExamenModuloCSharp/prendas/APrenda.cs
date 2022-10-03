@@ -18,6 +18,10 @@ namespace TeranJoanQuarkExamenModuloCSharp.prendas
         {
             return String.Format("APrenda:[Calidad:{0},PrecioUnitario:{1},CantidadEnStock:{2}]", Calidad, PrecioUnitario, CantidadEnStock);
         }
+        public virtual string PrettyToString()
+        {
+            return String.Format("Una prenda de Calidad {0}, PrecioUnitario {1}, CantidadEnStock{2} ", Calidad, PrecioUnitario, CantidadEnStock);
+        }
 
         public virtual bool Equals(APrenda obj)
         {

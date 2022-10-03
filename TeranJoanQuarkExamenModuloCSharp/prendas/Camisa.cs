@@ -16,6 +16,10 @@ namespace TeranJoanQuarkExamenModuloCSharp.prendas
         {
             return String.Format("Camisa:APrenda:[Calidad:{0},PrecioUnitario:${1},CantidadEnStock:{2},TipoDeCuello:{3},TipoDeManga:{4}]]", Calidad, PrecioUnitario, CantidadEnStock, TipoDeCuello, TipoDeManga);
         }
+        public override string PrettyToString()
+        {
+            return String.Format("Camisa de Calidad {0} de Cuello {1} y Manga {2}, P/U ${3}. Stock {4} unidades", Calidad, TipoDeCuello, TipoDeManga,PrecioUnitario, CantidadEnStock);
+        }
         public override bool Equals(APrenda obj)
         {
             return (obj is Camisa) &&
