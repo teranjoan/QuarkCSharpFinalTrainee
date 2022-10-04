@@ -56,7 +56,10 @@ namespace TeranJoanQuarkExamenModuloCSharp.vista
         public void MensajeDeOpcionIncorrecta()
         {
             Console.Clear();
+            Console.WriteLine("=============================================================");
             Console.WriteLine("Opcion incorrecta. Vuelve a intentarlo.");
+            Console.WriteLine("=============================================================");
+            Console.WriteLine();
         }
         public void MensajeDeSalirDelPrograma()
         {
@@ -80,11 +83,16 @@ namespace TeranJoanQuarkExamenModuloCSharp.vista
             }
             else
             {
+                Console.WriteLine("=============================================================");
 
                 for (int i = 0; i < HistorialCotizaciones.Count; i++)
                 {
                     Console.WriteLine("{0}- {1}",i, HistorialCotizaciones[i]);
                 }
+                
+                Console.WriteLine("=============================================================");
+                Console.WriteLine();
+                
             }
         }
 
