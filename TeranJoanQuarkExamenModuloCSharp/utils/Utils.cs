@@ -33,11 +33,11 @@ namespace TeranJoanQuarkExamenModuloCSharp.utils
         {
             if (camisa.TipoDeManga == TipoDeMangaDeCamisaEnum.Corta)
             {
-                camisa.PrecioUnitario += AplicarPorcentaje(camisa.PrecioUnitario, 10, false);
+                camisa.PrecioUnitario = AplicarPorcentaje(camisa.PrecioUnitario, 10, false);
             }
             if (camisa.TipoDeCuello == TipoDeCuelloDeCamisaEnum.Mao)
             {
-                camisa.PrecioUnitario += AplicarPorcentaje(camisa.PrecioUnitario, 3, true);
+                camisa.PrecioUnitario = AplicarPorcentaje(camisa.PrecioUnitario, 3, true);
             }
             return camisa.PrecioUnitario;
         }
