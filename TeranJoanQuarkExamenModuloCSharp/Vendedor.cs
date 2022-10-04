@@ -35,7 +35,7 @@ namespace TeranJoanQuarkExamenModuloCSharp
             }
             if (prenda.Calidad == CalidadEnum.Premium)
             {
-                prenda.PrecioUnitario = Utils.AplicarPorcentaje(prenda.PrecioUnitario, 30, false);
+                prenda.PrecioUnitario += Utils.AplicarPorcentaje(prenda.PrecioUnitario, 30, true);
             }
             prenda.CantidadEnStock = ObtenerCantidadEnStock(prenda);
 
