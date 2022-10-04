@@ -10,13 +10,14 @@ namespace TeranJoanQuarkExamenModuloCSharp.utils
        
         public static float AplicarPorcentaje(float precio, float porcentaje, bool incremental)
         {
+            float percentValue = precio * porcentaje / 100;
             if (incremental)
             {
-                return precio * (porcentaje / 100);
+                return precio + percentValue;
             }
             else
             {
-                return precio - (precio / 100 * porcentaje);
+                return precio - percentValue;
             }
 
         }
@@ -32,11 +33,11 @@ namespace TeranJoanQuarkExamenModuloCSharp.utils
         {
             if (camisa.TipoDeManga == TipoDeMangaDeCamisaEnum.Corta)
             {
-                camisa.PrecioUnitario = AplicarPorcentaje(camisa.PrecioUnitario, 10, false);
+                camisa.PrecioUnitario += AplicarPorcentaje(camisa.PrecioUnitario, 10, false);
             }
             if (camisa.TipoDeCuello == TipoDeCuelloDeCamisaEnum.Mao)
             {
-                camisa.PrecioUnitario = AplicarPorcentaje(camisa.PrecioUnitario, 3, true);
+                camisa.PrecioUnitario += AplicarPorcentaje(camisa.PrecioUnitario, 3, true);
             }
             return camisa.PrecioUnitario;
         }
